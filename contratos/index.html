@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Obras</title>
+    <script src="contratos.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Contratos de Obras</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Objeto</th>
+                <th>Empresa</th>
+                <th>Prazo de<br/>Execução</th>
+                <th>Prazo de<br/>Vigência</th>
+                <th>Dias<br/>Restantes</th>
+            </tr>
+        </thead>
+        <tbody id="listadecontratos">
+            
+        </tbody>
+    </table>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            criarplanilha();
+        });
+    </script>
+</body>
+</html>
