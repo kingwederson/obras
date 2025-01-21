@@ -18,6 +18,12 @@ var contratos = [
         data(17, 1, 2025)
     ],
     [
+        'Proceso de Serralheria',
+        'Diversos',
+        data(),
+        data(1, 3, 2025)
+    ],
+    [
         'Calçamento Estrada Taboão',
         'Construpav',
         data(3, 3, 2025),
@@ -34,6 +40,12 @@ var contratos = [
         'CONSTRUPAV',
         data(4, 1, 2025),
         data(27, 3, 2025)
+    ],
+    [
+        'Processo de Materiais de Construção',
+        'Diversos',
+        data(),
+        data(1, 4, 2025)
     ],
     [
         'Reforma da Escola do Tabuão',
@@ -53,6 +65,12 @@ var contratos = [
         data(16, 3, 2025),
         data(9, 5, 2025)
     ],
+    [
+        'Processo de Cascalho',
+        'Diversos',
+        data(),
+        data(1, 9, 2025)
+    ]
 ];
 
 function compara(alfa, beta){
@@ -112,7 +130,7 @@ function criarplanilha() {
         }else if(diasRestantes < 21){
             linha.style.backgroundColor = "red";
             linha.style.color = "white";
-        }else if(diasRestantes < 45){
+        }else if(diasRestantes < 42){
             linha.style.backgroundColor = "yellow";
         }
     }
