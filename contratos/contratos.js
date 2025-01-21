@@ -24,12 +24,6 @@ var contratos = [
         data(3, 3, 2025)
     ],
     [
-        'Reforma da Escola do Tabuão',
-        'MF Farias',
-        data(3, 2, 2025),
-        data(3, 4, 2025)
-    ],
-    [
         'Calçamento do Cristo',
         'Loredo Engenharia',
         data(),
@@ -40,6 +34,12 @@ var contratos = [
         'CONSTRUPAV',
         data(4, 1, 2025),
         data(27, 3, 2025)
+    ],
+    [
+        'Reforma da Escola do Tabuão',
+        'MF Farias',
+        data(3, 2, 2025),
+        data(3, 4, 2025)
     ],
     [
         'Quadra Sintética',
