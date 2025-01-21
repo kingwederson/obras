@@ -8,50 +8,50 @@ var contratos = [
     [
         'Calçamento Rio do Peixe',
         'CGCON',
-        data(2024, 11, 10),
-        data(2025, 1, 9)
+        data(7, 2, 2025),
+        data(9, 1, 2025)
     ],
     [
         'Fins Diversos',
         'T.J. Engenharia',
-        data(2025, 1, 17),
-        data(2025, 1, 17)
+        data(17, 1, 2025),
+        data(17, 1, 2025)
     ],
     [
         'Calçamento Estrada Taboão',
         'Construpav',
-        data(2025, 3, 3),
-        data(2025, 3, 3)
+        data(3, 3, 2025),
+        data(3, 3, 2025)
     ],
     [
         'Reforma da Escola do Tabuão',
         'MF Farias',
-        data(2025, 2, 3),
-        data(2025, 3, 4)
+        data(3, 2, 2025),
+        data(3, 4, 2025)
     ],
     [
         'Calçamento do Cristo',
         'Loredo Engenharia',
         data(),
-        data(2025, 3, 27)
+        data(27, 3, 2025)
     ],
     [
         'Trevo',
         'CONSTRUPAV',
-        data(2025, 1, 4),
-        data(2025, 3, 27)
+        data(4, 1, 2025),
+        data(27, 3, 2025)
     ],
     [
         'Quadra Sintética',
         'CGCON',
-        data(2025, 1, 28),
-        data(2025, 4, 28)
+        data(28, 1, 2025),
+        data(28, 4, 2025)
     ],
     [
         'Reforma da UBS',
         'Diego José',
-        data(2025, 3, 16),
-        data(2025, 5, 9)
+        data(16, 3, 2025),
+        data(9, 5, 2025)
     ],
 ];
 
@@ -61,9 +61,9 @@ function compara(alfa, beta){
     }
 }
 
-contratos.sort(compara);
+//contratos.sort(compara);
 
-function data(ano, mes, dia) {
+function data(dia, mes, ano) {
     if (ano !== undefined && mes !== undefined && dia !== undefined) {
         return new Date(ano, mes - 1, dia);
     }
