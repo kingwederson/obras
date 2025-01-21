@@ -69,6 +69,7 @@ td[data-label="Dias Restantes"]:before {
 
     tr {
         margin: 0 0 1rem 0;
+        border-bottom: 1px solid black;
     }
 
     tr:nth-child(even) {
