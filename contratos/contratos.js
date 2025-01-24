@@ -18,7 +18,7 @@ var contratos = [
         data(17, 1, 2025)
     ],
     [
-        'Proceso de Serralheria',
+        'Processo de Serralheria',
         'Diversos',
         data(),
         data(1, 3, 2025)
