@@ -1,74 +1,58 @@
 var botinas = [
     {
         numero: 37,
-        estoque: 50,
+        estoque: 2,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 38,
-        estoque: 50,
+        estoque: 14,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 39,
-        estoque: 50,
+        estoque: 34,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 40,
-        estoque: 50,
+        estoque: 70,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 41,
-        estoque: 50,
+        estoque: 84,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 42,
         estoque: 50,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 43,
-        estoque: 50,
+        estoque: 30,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     },
     {
         numero: 44,
-        estoque: 50,
+        estoque: 16,
         usuarios:[
-            'Fulano',
-            'Ciclano',
-            'Beltrano'
+            //
         ]
     }
 ]
