@@ -1,35 +1,35 @@
 var botinas = [
     {
         numero: 37,
-        estoque: 2,
+        estoque: 3,
         usuarios:[
             //
         ]
     },
     {
         numero: 38,
-        estoque: 14,
+        estoque: 16,
         usuarios:[
             //
         ]
     },
     {
         numero: 39,
-        estoque: 34,
+        estoque: 39,
         usuarios:[
             //
         ]
     },
     {
         numero: 40,
-        estoque: 70,
+        estoque: 75,
         usuarios:[
             //
         ]
     },
     {
         numero: 41,
-        estoque: 84,
+        estoque: 87,
         usuarios:[
             //
         ]
@@ -50,7 +50,7 @@ var botinas = [
     },
     {
         numero: 44,
-        estoque: 16,
+        estoque: 19,
         usuarios:[
             //
         ]
