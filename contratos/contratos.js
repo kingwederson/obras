@@ -32,8 +32,8 @@ var contratos = [
     [
         'Calçamento do Cristo',
         'Loredo Engenharia',
-        data(),
-        data(27, 3, 2025)
+        data(25, 3, 2025),
+        data(25, 3, 2025)
     ],
     [
         'Trevo',
