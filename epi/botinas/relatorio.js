@@ -29,7 +29,7 @@ var botinas = [
     },
     {
         numero: 41,
-        estoque: 87,
+        estoque: 87+1,
         usuarios:[
             //
         ]
@@ -38,7 +38,7 @@ var botinas = [
         numero: 42,
         estoque: 50,
         usuarios:[
-            //
+            ['Joel', '31-Jan-2025']
         ]
     },
     {
