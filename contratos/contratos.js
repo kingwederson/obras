@@ -125,13 +125,17 @@ function criarplanilha() {
         tabela.appendChild(linha);
 
         if(diasRestantes < 0){
-            linha.style.backgroundColor = "red";
+            linha.style.backgroundColor = "black";
             linha.style.color = "yellow";
-        }else if(diasRestantes < 21){
+        }else if(diasRestantes < 14){
             linha.style.backgroundColor = "red";
             linha.style.color = "white";
+        }else if(diasRestantes < 28){
+            linha.style.backgroundColor = "orangered";
+            linha.style.color = "black";
         }else if(diasRestantes < 42){
             linha.style.backgroundColor = "yellow";
+            linha.style.color = "black";
         }
     }
 }
