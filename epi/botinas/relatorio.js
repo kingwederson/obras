@@ -39,8 +39,8 @@ var botinas = [
         estoque: 50,
         usuarios:[
             ['Joel', '31-Jan-2025'],
-            ['Sebastião Elias', '03-Feb-2025'],
-            ['José Lucas', '03-Feb-2025'],
+            ['Sebastião Elias', '04-Feb-2025'],
+            ['José Lucas', '04-Feb-2025'],
         ]
     },
     {
@@ -54,8 +54,8 @@ var botinas = [
         numero: 44,
         estoque: 19,
         usuarios:[
-            ['Geraldo', '03-Feb-2025'],
-            ['Pedro Henrique', '03-Feb-2025'],
+            ['Geraldo', '04-Feb-2025'],
+            ['Pedro Henrique', '04-Feb-2025'],
         ]
     }
 ]
