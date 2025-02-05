@@ -41,6 +41,7 @@ var botinas = [
             ['Joel', '31-Jan-2025'],
             ['Sebastião Elias', '04-Feb-2025'],
             ['José Lucas', '04-Feb-2025'],
+            ['Zequinha', '04-Feb-2025']
         ]
     },
     {
