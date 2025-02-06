@@ -6,6 +6,12 @@ var contratos = [
         'Vigência'
     ],
     [
+        'Trevo',
+        'CONSTRUPAV',
+        data(4, 1, 2025),
+        data(27, 3, 2025)
+    ],
+    [
         'Calçamento Rio do Peixe',
         'CGCON',
         data(7, 2, 2025),
@@ -16,6 +22,18 @@ var contratos = [
         'T.J. Engenharia',
         data(17, 1, 2025),
         data(17, 1, 2025)
+    ],
+    [
+        'Quadra Sintética',
+        'CGCON',
+        data(28, 1, 2025),
+        data(28, 4, 2025)
+    ],
+    [
+        'Reforma da Escola do Tabuão',
+        'MF Farias',
+        data(3, 2, 2025),
+        data(3, 4, 2025)
     ],
     [
         'Processo de Serralheria',
@@ -30,15 +48,15 @@ var contratos = [
         data(3, 3, 2025)
     ],
     [
+        'Reforma da UBS',
+        'Diego José',
+        data(16, 3, 2025),
+        data(9, 5, 2025)
+    ],
+    [
         'Calçamento do Cristo',
         'Loredo Engenharia',
         data(27, 3, 2025),
-        data(27, 3, 2025)
-    ],
-    [
-        'Trevo',
-        'CONSTRUPAV',
-        data(4, 1, 2025),
         data(27, 3, 2025)
     ],
     [
@@ -46,24 +64,6 @@ var contratos = [
         'Diversos',
         data(),
         data(1, 4, 2025)
-    ],
-    [
-        'Reforma da Escola do Tabuão',
-        'MF Farias',
-        data(3, 2, 2025),
-        data(3, 4, 2025)
-    ],
-    [
-        'Quadra Sintética',
-        'CGCON',
-        data(28, 1, 2025),
-        data(28, 4, 2025)
-    ],
-    [
-        'Reforma da UBS',
-        'Diego José',
-        data(16, 3, 2025),
-        data(9, 5, 2025)
     ],
     [
         'Processo de Cascalho',
@@ -99,10 +99,28 @@ function criarplanilha() {
         const [objeto, empresa, execucao, vigencia] = contrato;
 
         // Calcular dias restantes para a vigência
-        let diasRestantes = null;
+        let diasRestantesVigencia = null;
+        let diasRestantesExecucao = null;
         if (vigencia) {
-            const diferencaMs = new Date(vigencia) - hoje;
-            diasRestantes = Math.ceil(diferencaMs / (1000 * 60 * 60 * 24)); // Conversão para dias
+            const diferencaVig = new Date(vigencia) - hoje;
+            diasRestantesVigencia = Math.ceil(diferencaVig / (1000 * 60 * 60 * 24)); // Conversão para dias
+        }
+        if (execucao) {
+            const diferencaExec = new Date(execucao) - hoje;
+            diasRestantesExecucao = Math.ceil(diferencaExec / (1000 * 60 * 60 * 24)); // Conversão para dias
+        }
+
+        var prazo = 0;
+        if(diasRestantesExecucao !== null){
+            if(diasRestantesVigencia < diasRestantesExecucao){
+                prazo = diasRestantesVigencia;
+            }if(diasRestantesVigencia > diasRestantesExecucao){
+                prazo = diasRestantesExecucao;
+            }else{
+                prazo = diasRestantesVigencia;
+            }
+        }else{
+            prazo = diasRestantesVigencia;
         }
 
         // Formatar datas
@@ -116,25 +134,24 @@ function criarplanilha() {
         linha.innerHTML = `
             <td data-label="Objeto">${objeto}</td>
             <td data-label="Empresa">${empresa}</td>
+            <td data-label="Menor Prazo">${prazo}</td>
             <td data-label="Prazo de Execução">${execucaoFormatada}</td>
+            <td data-label="Dias Restantes para Execução">${diasRestantesExecucao !== null ? diasRestantesExecucao : "Não definido"}</td>
             <td data-label="Prazo de Vigência">${vigenciaFormatada}</td>
-            <td data-label="Dias Restantes">${diasRestantes !== null ? diasRestantes : "Não definido"}</td>
+            <td data-label="Dias Restantes para Vigência">${diasRestantesVigencia !== null ? diasRestantesVigencia : "Não definido"}</td>
         `;
 
         // Adicionar linha à tabela
         tabela.appendChild(linha);
 
-        if(diasRestantes < 0){
+        if(prazo < 0){
             linha.style.backgroundColor = "black";
             linha.style.color = "yellow";
-        }else if(diasRestantes < 14){
+        }else if(prazo < 14){
             linha.style.backgroundColor = "red";
             linha.style.color = "white";
-        }else if(diasRestantes < 28){
+        }else if(prazo < 28){
             linha.style.backgroundColor = "orangered";
-            linha.style.color = "black";
-        }else if(diasRestantes < 42){
-            linha.style.backgroundColor = "yellow";
             linha.style.color = "black";
         }
     }
