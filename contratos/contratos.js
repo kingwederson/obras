@@ -6,28 +6,10 @@ var contratos = [
         'Vigência'
     ],
     [
-        'Trevo',
-        'CONSTRUPAV',
-        data(27, 3, 2025),
-        data(27, 3, 2025)
-    ],
-    [
         'Calçamento Rio do Peixe',
         'CGCON',
         data(7, 2, 2025),
         data(9, 5, 2025)
-    ],
-    [
-        'Fins Diversos',
-        'T.J. Engenharia',
-        data(17, 6, 2025),
-        data(17, 6, 2025)
-    ],
-    [
-        'Quadra Sintética',
-        'CGCON',
-        data(13, 3, 2025),
-        data(28, 4, 2025)
     ],
     [
         'Reforma da Escola do Tabuão',
@@ -48,6 +30,12 @@ var contratos = [
         data(3, 3, 2025)
     ],
     [
+        'Quadra Sintética',
+        'CGCON',
+        data(13, 3, 2025),
+        data(28, 4, 2025)
+    ],
+    [
         'Reforma da UBS',
         'Diego José',
         data(16, 3, 2025),
@@ -60,10 +48,22 @@ var contratos = [
         data(27, 3, 2025)
     ],
     [
+        'Trevo',
+        'CONSTRUPAV',
+        data(27, 3, 2025),
+        data(27, 3, 2025)
+    ],
+    [
         'Processo de Materiais de Construção',
         'Diversos',
         data(),
         data(1, 4, 2025)
+    ],
+    [
+        'Fins Diversos',
+        'T.J. Engenharia',
+        data(17, 6, 2025),
+        data(17, 6, 2025)
     ],
     [
         'Processo de Cascalho',
