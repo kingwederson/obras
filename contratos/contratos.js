@@ -70,12 +70,6 @@ var contratos = [
         'Diversos',
         data(),
         data(1, 9, 2025)
-    ],
-    [
-        'Teste',
-        'Wederson',
-        data(11, 2, 2025),
-        data(13, 2, 2025)
     ]
 ];
 
