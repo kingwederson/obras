@@ -82,6 +82,11 @@ td[data-label="Dias Restantes"]:before {
         padding-left: 50%;
         text-align: right;
     }
+
+    td.numero{
+        text-align: center;
+    }
+    
     td:before {
         position: absolute;
         top: 12px;
