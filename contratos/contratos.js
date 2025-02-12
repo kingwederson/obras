@@ -70,6 +70,12 @@ var contratos = [
         'Diversos',
         data(),
         data(1, 9, 2025)
+    ],
+    [
+        'Teste',
+        'Wederson',
+        data(11, 2, 2025),
+        data(13, 2, 2025)
     ]
 ];
 
@@ -136,9 +142,9 @@ function criarplanilha() {
             <td data-label="Empresa">${empresa}</td>
             <td data-label="Menor Prazo">${prazo}</td>
             <td data-label="Prazo de Execução">${execucaoFormatada}</td>
-            <td data-label="Dias Restantes para Execução" class="numero">${diasRestantesExecucao !== null ? diasRestantesExecucao : "Não definido"} dias</td>
+            <td data-label="Dias Restantes para Execução" class="numero">${diasRestantesExecucao !== null ? diasRestantesExecucao : "Não definido"} ${diasRestantesExecucao**2 < 1.5 ? "dia" : "dias"}</td>
             <td data-label="Prazo de Vigência">${vigenciaFormatada}</td>
-            <td data-label="Dias Restantes para Vigência" class="numero">${diasRestantesVigencia !== null ? diasRestantesVigencia : "Não definido"} dias</td>
+            <td data-label="Dias Restantes para Vigência" class="numero">${diasRestantesVigencia !== null ? diasRestantesVigencia : "Não definido"} ${diasRestantesVigencia**2 < 1.5 ? "dia" : "dias"}</td>
         `;
 
         // Adicionar linha à tabela
