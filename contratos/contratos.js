@@ -135,9 +135,9 @@ function criarplanilha() {
             <td data-label="Objeto">${objeto}</td>
             <td data-label="Empresa">${empresa}</td>
             <td data-label="Menor Prazo">${prazo}</td>
-            <td data-label="Prazo de Execução">${execucaoFormatada}</td>
+            <td data-label="Prazo de Execução">${execucaoFormatada} dias</td>
             <td data-label="Dias Restantes para Execução" class="numero">${diasRestantesExecucao !== null ? diasRestantesExecucao : "Não definido"}</td>
-            <td data-label="Prazo de Vigência">${vigenciaFormatada}</td>
+            <td data-label="Prazo de Vigência">${vigenciaFormatada} dias</td>
             <td data-label="Dias Restantes para Vigência" class="numero">${diasRestantesVigencia !== null ? diasRestantesVigencia : "Não definido"}</td>
         `;
 
