@@ -18,12 +18,6 @@ var contratos = [
         data(3, 4, 2025)
     ],
     [
-        'Processo de Serralheria',
-        'Diversos',
-        data(),
-        data(1, 3, 2025)
-    ],
-    [
         'Calçamento Estrada Taboão',
         'Construpav',
         data(3, 3, 2025),
@@ -58,6 +52,12 @@ var contratos = [
         'Diversos',
         data(),
         data(1, 4, 2025)
+    ],
+    [
+        'Processo de Serralheria',
+        'Diversos',
+        data(4, 4, 2025),
+        data(4, 4, 2025)
     ],
     [
         'Fins Diversos',
