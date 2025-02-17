@@ -70,6 +70,12 @@ var contratos = [
         'Diversos',
         data(),
         data(1, 9, 2025)
+    ],
+    [
+        'SAMU',
+        '',
+        data(),
+        data(14, 9, 2025)
     ]
 ];
 
