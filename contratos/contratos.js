@@ -8,7 +8,7 @@ var contratos = [
     [
         'Calçamento Rio do Peixe',
         'CGCON',
-        data(7, 2, 2025),
+        data(9, 5, 2025),
         data(9, 5, 2025)
     ],
     [
