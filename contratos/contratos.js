@@ -6,12 +6,6 @@ var contratos = [
         'Vigência'
     ],
     [
-        'Calçamento Rio do Peixe',
-        'CGCON',
-        data(9, 5, 2025),
-        data(9, 5, 2025)
-    ],
-    [
         'Reforma da Escola do Tabuão',
         'MF Farias',
         data(3, 2, 2025),
@@ -58,6 +52,12 @@ var contratos = [
         'Diversos',
         data(4, 4, 2025),
         data(4, 4, 2025)
+    ],
+    [
+        'Calçamento Rio do Peixe',
+        'CGCON',
+        data(9, 5, 2025),
+        data(9, 5, 2025)
     ],
     [
         'Fins Diversos',
