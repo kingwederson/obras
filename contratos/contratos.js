@@ -153,12 +153,14 @@ function criarplanilha() {
         if(prazo < 0){
             linha.style.backgroundColor = "black";
             linha.style.color = "yellow";
-        }else if(prazo < 14){
+        }else if(prazo < 15){
             linha.style.backgroundColor = "red";
             linha.style.color = "white";
-        }else if(prazo < 28){
+        }else if(prazo < 30){
             linha.style.backgroundColor = "orange";
             linha.style.color = "black";
-        }
+        }else if(prazo < 42){
+            linha.style.backgroundColor = "yellow";
+            linha.style.color = "black";}
     }
 }
