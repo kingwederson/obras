@@ -157,7 +157,7 @@ function criarplanilha() {
             linha.style.backgroundColor = "red";
             linha.style.color = "white";
         }else if(prazo < 28){
-            linha.style.backgroundColor = "orangered";
+            linha.style.backgroundColor = "orange";
             linha.style.color = "black";
         }
     }
