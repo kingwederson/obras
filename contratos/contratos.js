@@ -42,12 +42,6 @@ var contratos = [
         data(27, 3, 2025)
     ],
     [
-        'Processo de Materiais de Construção',
-        'Diversos',
-        data(),
-        data(15, 5, 2025)
-    ],
-    [
         'Processo de Serralheria',
         'Diversos',
         data(4, 4, 2025),
@@ -58,6 +52,12 @@ var contratos = [
         'CGCON',
         data(9, 5, 2025),
         data(9, 5, 2025)
+    ],
+    [
+        'Processo de Materiais de Construção',
+        'Diversos',
+        data(),
+        data(15, 5, 2025)
     ],
     [
         'Fins Diversos',
