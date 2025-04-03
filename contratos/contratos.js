@@ -73,7 +73,7 @@ var contratos = [
     ],
     [
         'SAMU',
-        '',
+        'Lariba Engenharia',
         data(),
         data(14, 9, 2025)
     ]
