@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contrato de Obras</title>
-    <script src="contratos.js?v=2025-04-03_08-34-45"></script>
+    <script src="contratos.js"></script>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Contratos de Obras</h1>
-    <table>
+    <h2>Prazos de Vigência</h2>
+    <table id="vigencia">
         <thead>
             <tr>
                 <th>Objeto</th>
                 <th>Empresa</th>
-                <th>Menor<br/>Prazo</th>
-                <th>Prazo de<br/>Execução</th>
-                <th>Tempo<br/>Restante para<br/>Execução</th>
                 <th>Prazo de<br/>Vigência</th>
                 <th>Tempo<br/>Restante para<br/>Vigência</th>
             </tr>
         </thead>
-        <tbody id="listadecontratos">
+        <tbody id="listadevigencia">
             
         </tbody>
-        <caption>
-            Obs.: Verificar garantia da obra CONSTRUPAV (Trevo).
-        </caption>
+    </table>
+
+    <h2>Prazos de Execução</h2>
+    <table id="execucao">
+        <thead>
+            <tr>
+                <th>Objeto</th>
+                <th>Empresa</th>
+                <th>Prazo de<br/>Execução</th>
+                <th>Tempo<br/>Restante para<br/>Execução</th>
+            </tr>
+        </thead>
+        <tbody id="listadeexecucao">
+            
+        </tbody>
     </table>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

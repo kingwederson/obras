@@ -6,28 +6,10 @@ var contratos = [
         'Vigência'
     ],
     [
-        'Reforma da Escola do Tabuão',
-        'MF Farias',
-        data(3, 2, 2025),
-        data(3, 4, 2025)
-    ],
-    [
         'Calçamento Estrada Taboão',
         'Construpav',
         data(3, 3, 2025),
         data(3, 3, 2025)
-    ],
-    [
-        'Quadra Sintética',
-        'CGCON',
-        data(13, 3, 2025),
-        data(28, 4, 2025)
-    ],
-    [
-        'Reforma da UBS',
-        'Diego José',
-        data(16, 3, 2025),
-        data(9, 5, 2025)
     ],
     [
         'Calçamento do Cristo',
@@ -42,22 +24,40 @@ var contratos = [
         data(27, 3, 2025)
     ],
     [
+        'Processo de Materiais de Construção',
+        'Diversos',
+        data(),
+        data(1, 4, 2025)
+    ],
+    [
+        'Reforma da Escola do Tabuão',
+        'MF Farias',
+        data(3, 2, 2025),
+        data(3, 4, 2025)
+    ],
+    [
         'Processo de Serralheria',
         'Diversos',
         data(4, 4, 2025),
         data(4, 4, 2025)
     ],
     [
+        'Quadra Sintética',
+        'CGCON',
+        data(13, 3, 2025),
+        data(28, 4, 2025)
+    ],
+    [
+        'Reforma da UBS',
+        'Diego José',
+        data(16, 3, 2025),
+        data(9, 5, 2025)
+    ],
+    [
         'Calçamento Rio do Peixe',
         'CGCON',
         data(9, 5, 2025),
         data(9, 5, 2025)
-    ],
-    [
-        'Processo de Materiais de Construção',
-        'Diversos',
-        data(),
-        data(15, 5, 2025)
     ],
     [
         'Fins Diversos',
@@ -96,69 +96,65 @@ function data(dia, mes, ano) {
 
 
 function criarplanilha() {
-    const tabela = document.getElementById("listadecontratos");
-    const hoje = new Date(); // Data atual
+    const hoje = new Date();
+    const tbodyVigencia = document.getElementById('listadevigencia');
+    const tbodyExecucao = document.getElementById('listadeexecucao');
 
-    // Ignorar o cabeçalho e iterar sobre os contratos
-    for (let i = 1; i < contratos.length; i++) {
-        const contrato = contratos[i];
-        const [objeto, empresa, execucao, vigencia] = contrato;
+    contratos.slice(1).forEach(contrato => {
+        const objeto = contrato[0];
+        const empresa = contrato[1];
+        const prazoExecucao = contrato[2];
+        const prazoVigencia = contrato[3];
 
-        // Calcular dias restantes para a vigência
-        let diasRestantesVigencia = null;
-        let diasRestantesExecucao = null;
-        if (vigencia) {
-            const diferencaVig = new Date(vigencia) - hoje;
-            diasRestantesVigencia = Math.ceil(diferencaVig / (1000 * 60 * 60 * 24)); // Conversão para dias
-        }
-        if (execucao) {
-            const diferencaExec = new Date(execucao) - hoje;
-            diasRestantesExecucao = Math.ceil(diferencaExec / (1000 * 60 * 60 * 24)); // Conversão para dias
-        }
+        // Função para formatar a data no formato "03 Apr 2025"
+        const formatarData = (data) => {
+            return data.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+            });
+        };
 
-        var prazo = 0;
-        if(diasRestantesExecucao !== null){
-            if(diasRestantesVigencia < diasRestantesExecucao){
-                prazo = diasRestantesVigencia;
-            }if(diasRestantesVigencia > diasRestantesExecucao){
-                prazo = diasRestantesExecucao;
-            }else{
-                prazo = diasRestantesVigencia;
+        // Função para aplicar estilos de cor às linhas
+        const aplicarEstiloLinha = (linha, prazo) => {
+            if (prazo < 0) {
+                linha.style.backgroundColor = "black";
+                linha.style.color = "yellow";
+            } else if (prazo > 360) {
+                linha.style.backgroundColor = "white";
+                linha.style.color = "black";
+            } else {
+                linha.style.backgroundColor = `hsl(${prazo * 0.67}, 100%, 50%)`;
+                linha.style.color = "black";
             }
-        }else{
-            prazo = diasRestantesVigencia;
+        };
+
+        // Preenchendo a tabela de execução
+        if (prazoExecucao) {
+            const tempoRestanteExecucao = Math.ceil((prazoExecucao - hoje) / (1000 * 60 * 60 * 24)); // Dias restantes
+            const trExecucao = document.createElement('tr');
+            trExecucao.innerHTML = `
+                <td>${objeto}</td>
+                <td>${empresa}</td>
+                <td>${formatarData(prazoExecucao)}</td>
+                <td>${tempoRestanteExecucao > -1 ? `Falta(m) ${tempoRestanteExecucao} dia(s)` : `Expirou há ${-tempoRestanteExecucao} dia(s)`}</td>
+            `;
+            aplicarEstiloLinha(trExecucao, tempoRestanteExecucao);
+            tbodyExecucao.appendChild(trExecucao);
         }
 
-        // Formatar datas
-        const execucaoFormatada = execucao ? new Date(execucao).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Indefinido';
-        const vigenciaFormatada = vigencia ? new Date(vigencia).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Indefinido';
-
-        // Criar linha para a tabela
-        const linha = document.createElement("tr");
-
-        // Adicionar colunas
-        linha.innerHTML = `
-            <td data-label="Objeto">${objeto}</td>
-            <td data-label="Empresa">${empresa}</td>
-            <td data-label="Menor Prazo">${prazo}</td>
-            <td data-label="Prazo de Execução">${execucaoFormatada}</td>
-            <td data-label="Dias Restantes para Execução" class="numero">${diasRestantesExecucao !== null ? diasRestantesExecucao : "Não definido o"} ${diasRestantesExecucao**2 < 1.5 ? "dia" : "dias"}</td>
-            <td data-label="Prazo de Vigência">${vigenciaFormatada}</td>
-            <td data-label="Dias Restantes para Vigência" class="numero">${diasRestantesVigencia !== null ? diasRestantesVigencia : "Não definido o"} ${diasRestantesVigencia**2 < 1.5 ? "dia" : "dias"}</td>
-        `;
-
-        // Adicionar linha à tabela
-        tabela.appendChild(linha);
-
-        if(prazo < 0){
-            linha.style.backgroundColor = "black";
-            linha.style.color = "yellow";
-        }else if(prazo > 360){
-            linha.style.backgroundColor = "white";
-            linha.style.color = "black";
-        }else{
-            linha.style.backgroundColor = `hsl(${prazo*0.67}, 100%, 50%)`;
-            linha.style.color = "black";
+        // Preenchendo a tabela de vigência
+        if (prazoVigencia) {
+            const tempoRestanteVigencia = Math.ceil((prazoVigencia - hoje) / (1000 * 60 * 60 * 24)); // Dias restantes
+            const trVigencia = document.createElement('tr');
+            trVigencia.innerHTML = `
+                <td>${objeto}</td>
+                <td>${empresa}</td>
+                <td>${formatarData(prazoVigencia)}</td>
+                <td>${tempoRestanteVigencia > -1 ? `Falta(m) ${tempoRestanteVigencia} dia(s)` : `Expirado há ${-tempoRestanteVigencia} dia(s)`}</td>
+            `;
+            aplicarEstiloLinha(trVigencia, tempoRestanteVigencia);
+            tbodyVigencia.appendChild(trVigencia);
         }
-    }
+    });
 }
