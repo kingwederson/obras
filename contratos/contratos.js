@@ -32,7 +32,7 @@ var contratos = [
     [
         'Processo de Serralheria',
         'Diversos',
-        data(4, 4, 2025),
+        data(),
         data(4, 4, 2025)
     ],
     [
@@ -86,7 +86,6 @@ function compara(alfa, beta){
 }
 
 //contratos.sort(compara);
-var plural = ["m","s"];
 
 function data(dia, mes, ano) {
     if (ano !== undefined && mes !== undefined && dia !== undefined) {
@@ -138,7 +137,17 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoExecucao)}</td>
-                <td>${tempoRestanteExecucao > -1 ? `Falta${plural[0]} ${tempoRestanteExecucao} dia${plural[1]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
+                <td>${
+                    tempoRestanteExecucao === 1
+                        ? `Falta 1 dia`
+                        : tempoRestanteExecucao === 0
+                        ? `Expira hoje`
+                        : tempoRestanteExecucao === -1
+                        ? `Expirou há 1 dia`
+                        : tempoRestanteExecucao > 1
+                        ? `Faltam ${tempoRestanteExecucao} dias`
+                        : `Expirou há ${-tempoRestanteExecucao} dias`
+                }</td>
             `;
             aplicarEstiloLinha(trExecucao, tempoRestanteExecucao);
             tbodyExecucao.appendChild(trExecucao);
@@ -152,7 +161,17 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoVigencia)}</td>
-                <td>${tempoRestanteVigencia > -1 ? `Falta${plural[0]} ${tempoRestanteVigencia} dia${plural[1]}` : `Expirado há ${-tempoRestanteVigencia} dia${plural[1]}`}</td>
+                <td>${
+                    tempoRestanteVigencia === 1
+                        ? `Falta 1 dia`
+                        : tempoRestanteVigencia === 0
+                        ? `Expira hoje`
+                        : tempoRestanteVigencia === -1
+                        ? `Expirou há 1 dia`
+                        : tempoRestanteVigencia > 1
+                        ? `Faltam ${tempoRestanteVigencia} dias`
+                        : `Expirou há ${-tempoRestanteVigencia} dias`
+                }</td>
             `;
             aplicarEstiloLinha(trVigencia, tempoRestanteVigencia);
             tbodyVigencia.appendChild(trVigencia);
