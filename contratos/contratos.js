@@ -138,7 +138,7 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoExecucao)}</td>
-                <td>${tempoRestanteExecucao > -1 ? `Falta(m) ${tempoRestanteExecucao} dia${plural[0]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
+                <td>${tempoRestanteExecucao > -1 ? `Falta${plural[0]} ${tempoRestanteExecucao} dia${plural[1]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
             `;
             aplicarEstiloLinha(trExecucao, tempoRestanteExecucao);
             tbodyExecucao.appendChild(trExecucao);
@@ -152,7 +152,7 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoVigencia)}</td>
-                <td>${tempoRestanteVigencia > -1 ? `Falta(m) ${tempoRestanteVigencia} dia(s)` : `Expirado há ${-tempoRestanteVigencia} dia(s)`}</td>
+                <td>${tempoRestanteVigencia > -1 ? `Falta${plural[0]} ${tempoRestanteExecucao} dia${plural[1]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
             `;
             aplicarEstiloLinha(trVigencia, tempoRestanteVigencia);
             tbodyVigencia.appendChild(trVigencia);
