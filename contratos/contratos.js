@@ -86,6 +86,7 @@ function compara(alfa, beta){
 }
 
 //contratos.sort(compara);
+var plural = ["m","s"];
 
 function data(dia, mes, ano) {
     if (ano !== undefined && mes !== undefined && dia !== undefined) {
@@ -137,7 +138,7 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoExecucao)}</td>
-                <td>${tempoRestanteExecucao > -1 ? `Falta(m) ${tempoRestanteExecucao} dia(s)` : `Expirou há ${-tempoRestanteExecucao} dia(s)`}</td>
+                <td>${tempoRestanteExecucao > -1 ? `Falta(m) ${tempoRestanteExecucao} dia${plural[0]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
             `;
             aplicarEstiloLinha(trExecucao, tempoRestanteExecucao);
             tbodyExecucao.appendChild(trExecucao);
