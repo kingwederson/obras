@@ -152,7 +152,7 @@ function criarplanilha() {
                 <td>${objeto}</td>
                 <td>${empresa}</td>
                 <td>${formatarData(prazoVigencia)}</td>
-                <td>${tempoRestanteVigencia > -1 ? `Falta${plural[0]} ${tempoRestanteExecucao} dia${plural[1]}` : `Expirou há ${-tempoRestanteExecucao} dia${plural[1]}`}</td>
+                <td>${tempoRestanteVigencia > -1 ? `Falta${plural[0]} ${tempoRestanteVigencia} dia${plural[1]}` : `Expirado há ${-tempoRestanteVigencia} dia${plural[1]}`}</td>
             `;
             aplicarEstiloLinha(trVigencia, tempoRestanteVigencia);
             tbodyVigencia.appendChild(trVigencia);
