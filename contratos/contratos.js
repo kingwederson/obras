@@ -12,12 +12,6 @@ var contratos = [
         data(3, 4, 2025)
     ],
     [
-        'Processo de Serralheria',
-        'Diversos',
-        data(),
-        data(4, 4, 2026)
-    ],
-    [
         'Reforma da UBS',
         'Diego José',
         data(16, 3, 2025),
@@ -70,6 +64,12 @@ var contratos = [
         '',
         data(1, 1, 2026),
         data(1, 1, 2026)
+    ],
+    [
+        'Processo de Serralheria',
+        'Diversos',
+        data(),
+        data(4, 4, 2026)
     ]
 ];
 
