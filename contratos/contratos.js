@@ -6,24 +6,6 @@ var contratos = [
         'Vigência'
     ],
     [
-        'Calçamento Estrada Taboão',
-        'Construpav',
-        data(3, 3, 2025),
-        data(3, 3, 2025)
-    ],
-    [
-        'Calçamento do Cristo',
-        'Loredo Engenharia',
-        data(27, 3, 2025),
-        data(27, 3, 2025)
-    ],
-    [
-        'Trevo',
-        'CONSTRUPAV',
-        data(27, 3, 2025),
-        data(27, 3, 2025)
-    ],
-    [
         'Reforma da Escola do Tabuão',
         'MF Farias',
         data(3, 2, 2025),
@@ -33,13 +15,7 @@ var contratos = [
         'Processo de Serralheria',
         'Diversos',
         data(),
-        data(4, 4, 2025)
-    ],
-    [
-        'Quadra Sintética',
-        'CGCON',
-        data(13, 3, 2025),
-        data(28, 4, 2025)
+        data(4, 4, 2026)
     ],
     [
         'Reforma da UBS',
@@ -76,6 +52,24 @@ var contratos = [
         'Lariba Engenharia',
         data(),
         data(14, 9, 2025)
+    ],
+    [
+        'Banheiro da Praça da Rov.',
+        'Lariba Engenharia',
+        data(1, 1, 2026),
+        data(1, 1, 2026)
+    ],
+    [
+        'Trevo, 2ª etapa',
+        'CONSTRUPAV',
+        data(1, 1, 2026),
+        data(1, 1, 2026)
+    ],
+    [
+        'Ponte dona Geni',
+        '',
+        data(1, 1, 2026),
+        data(1, 1, 2026)
     ]
 ];
 
