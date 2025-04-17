@@ -8,8 +8,8 @@ var contratos = [
     [
         'Trevo, 1ª etapa',
         'CONSTRUPAV',
-        data(27, 3, 2026),
-        data(27, 3, 2026)
+        data(27, 3, 2025),
+        data(27, 3, 2025)
     ],
     [
         'Reforma da UBS',
