@@ -6,6 +6,12 @@ var contratos = [
         'Vigência'
     ],
     [
+        'Trevo, 1ª etapa',
+        'CONSTRUPAV',
+        data(27, 3, 2026),
+        data(27, 3, 2026)
+    ],
+    [
         'Reforma da UBS',
         'Diego José',
         data(16, 3, 2025),
