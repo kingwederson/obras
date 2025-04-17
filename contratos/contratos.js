@@ -6,12 +6,6 @@ var contratos = [
         'Vigência'
     ],
     [
-        'Reforma da Escola do Tabuão',
-        'MF Farias',
-        data(3, 2, 2025),
-        data(3, 4, 2025)
-    ],
-    [
         'Reforma da UBS',
         'Diego José',
         data(16, 3, 2025),
@@ -34,6 +28,12 @@ var contratos = [
         'T.J. Engenharia',
         data(17, 6, 2025),
         data(17, 6, 2025)
+    ],
+    [
+        'Reforma da Escola do Tabuão',
+        'MF Farias',
+        data(10, 7, 2025),
+        data(10, 7, 2025)
     ],
     [
         'Processo de Cascalho',
